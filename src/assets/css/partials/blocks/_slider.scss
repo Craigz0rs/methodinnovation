@@ -1,0 +1,260 @@
+.slider {
+    position: relative;
+    padding-bottom: 90px;
+
+    @include mobile-break {
+        margin-bottom: 100px;
+    }
+
+    @include screen--xxl {
+        margin-bottom: 200px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 35vw;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $grey--light;
+        z-index: -1;
+
+        @include mobile-break {
+            top: calc(33vw / 2);
+        }
+    }
+
+    &.slider--awards {
+        margin-bottom: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .slick-list {
+        @include mobile-break {
+            padding:0 60px 0 15px !important;
+        }
+
+        @include screen--xxl {
+            padding: 0 70px 0 20px !important;
+        }
+    }
+
+    &__slide {
+        padding: 0 $gutter;
+
+        @include mobile-break {
+            padding: 0 15px;
+        }
+
+        @include screen--xxl {
+            padding: 0 20px;
+        }
+
+        &__image {
+            height: 70vw;
+            width: 100%;
+
+            @include mobile-break {
+                position: relative;
+                height: 33vw;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 50%;
+                    background-color: $grey--xdark;
+                    background-image: url( 'data:image/svg+xml;base64, #{$svg__button-arrow}' );
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 20px;
+                    transform: translateX(-50%) translateY(-50%) scale(0);
+                    transition: $transition;
+                    z-index: 2;
+                }
+            }
+
+            div.slider--awards & {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $grey--light;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                div.slider--awards & {
+                    width: 50%;
+                    height: 50%;
+                    object-fit: contain;
+                    object-position: center;
+                    filter: grayscale(1);
+
+                    @include screen--xxl {
+                        width: 33%;
+                        height: 33%;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            position: relative;
+            text-align: right;
+            padding-top: 15px;
+            padding-left: 75px;
+
+            b {
+                position: absolute;
+                top: 0;
+                left:15px;
+                font-size: 72px;
+                line-height: 1;
+                color: $color__primary;
+                font-family: $font__family--heading;
+                font-weight: $font__weight--regular;
+                transform: translateY(-50%);
+
+                @include mobile-break {
+                    font-size: 100px;
+                }
+
+                @include screen--xxl {
+                    font-size: 150px;
+                    left: 35px;
+                }
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 18px;
+                letter-spacing: tracking(100);
+
+                @include mobile-break {
+                    font-size: 24px;
+                }
+            }
+
+            span {
+                margin: 0;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: $font__weight--semibold;
+                font-family: $font__family--heading--alt;
+                color: $grey--dark;
+                letter-spacing: tracking(100);
+            }
+        }
+
+        a.has-link {
+            &:hover, &:focus {
+                .slider__slide__image:before {
+                    transform: translateX(-50%) translateY(-50%) scale(1);
+                }
+            }
+        }
+
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0 $gutter;
+        margin-top: 45px;
+
+        @include mobile-break {
+            margin-top: 75px;
+        }
+
+        @include screen--xxl {
+            margin-top: 100px;
+            padding: 0 150px;
+        }
+
+        .slick-dots {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            align-items: center;
+            order: -1;
+
+            > li {
+                display: flex;
+                align-items: center;
+                width:100%;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: $grey--dark;
+                    transition: $transition;
+                }
+
+                button {
+                    font-size: 0;
+                    color: transparent;
+                    height: 0px;
+                    width: 0px;
+                    overflow: hidden;
+                    opacity: 0;
+                }
+
+                &.slick-active {
+                    &:before {
+                        height: 3px;
+                        background-color: $grey--xdark;
+                    }
+                }
+            }
+        }
+
+        .slider__buttons {
+            flex-shrink: 0;
+            margin-left: $gutter;
+    
+            @include mobile-break {
+                margin-left: 60px;
+            }
+    
+            @include screen--xxl {
+                margin-left: 90px;
+            }
+        }
+    }
+
+}
+
+.slick-arrow {
+    border: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: none !important;
+    background-color: $grey--xdark;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        background-color: $black;
+    }
+
+    svg {
+        width: 16px;
+    }
+
+    &.slick-next {
+        margin-left: 12px;
+    }
+}

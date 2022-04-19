@@ -1,0 +1,120 @@
+.wp-block-buttons {
+  margin-top: 40px;
+}
+
+.wp-block-button__link, .next-page-link-wrapper > a, .next-page-link-wrapper-projects > a {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 190px;
+  min-height: 60px;
+  border: none;
+  background-color: $grey--xdark;
+  color: $white;
+  font-family: $font__family--heading--alt;
+  font-weight: $font__weight--heading--alt;
+  font-size: 14px;
+  line-height: (17 / 14);
+  letter-spacing: tracking(100);
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 0px;
+    background-color: $black;
+    transition: $transition;
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    position: relative;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    background-image: url( 'data:image/svg+xml;base64, #{$svg__button-arrow}' );
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: $transition;
+  }
+
+  &:hover, &:focus {
+    outline: 0;
+
+    &:before {
+      max-width: 100%;
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+  
+  div.is-style-video & {
+    flex-wrap: wrap;
+    background-color: $color__primary;
+    border-radius: 0;
+    padding: 25px 100px 25px $gutter;
+    font-family: $font__family--heading;
+    font-weight: $font__weight--regular;
+    letter-spacing: tracking(100);
+    font-size: 18px;
+
+    @include mobile-break {
+      font-size: 22px;
+      padding: 40px 100px 40px 40px;
+    }
+
+    &:before {
+      content: 'WATCH';
+      position: relative;
+      display: block;
+      margin-bottom: 10px;
+      text-align: left;
+      font-family: $font__family--heading--alt;
+      font-weight: $font__weight--heading--alt;
+      letter-spacing: tracking(100);
+      font-size: 14px;
+      max-width: 100%;
+      background-color: transparent;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 30px;
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      background-color: #007FA4;
+      background-image: url( 'data:image/svg+xml;base64, #{$svg__play}' );
+      background-size: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: $transition;
+
+      @include mobile-break {
+        width: 60px;
+        height: 60px;
+      }
+
+    }
+
+    &:hover, &:focus {
+      &:after {
+        transform: rotate(0);
+        background-color: $black;
+      }
+    }
+  }
+}
+

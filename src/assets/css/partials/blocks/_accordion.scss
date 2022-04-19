@@ -1,0 +1,111 @@
+.accordion {
+    position: relative;
+
+    > div.accordion__item {
+        &:last-of-type {
+            border-bottom: 0;
+        }
+    }
+
+    &__item {
+        //border-bottom: 1px solid $color__primary;
+
+        h3 {
+            margin: 0;
+        }
+
+        button {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            background: transparent;
+            border: none;
+            font-family: $font__family--heading;
+            font-weight: $font__weight--regular;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-align: left;
+            color: $black;
+            padding: 30px 0;
+            line-height: 1.2;
+            transition: 0.3s ease;
+            cursor: pointer;
+
+            @include mobile-break {
+                font-size: 48px;
+            }
+
+            > sup {
+                font-size: 18px;
+                margin-right: 8px;
+                
+                @include mobile-break {
+                    font-size: 24px;
+                }
+            }
+
+            > span {
+                margin-right: 16px;
+            }
+
+            b {
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                flex-shrink: 0;
+                margin-left: auto;
+                transition: 0.3s ease;
+                font-family: $font__family--heading--alt;
+                font-weight: $font__weight--regular;
+                font-size: 12px;
+                letter-spacing: tracking(100);
+
+                @include mobile-break {
+                    font-size: 14px;
+                }
+
+                &:after {
+                    display: none;
+                    content: '';
+                    position: relative;
+                    margin-top: 3px;
+                    margin-left: 16px;
+                    height: 2px;
+                    width: 30px;
+                    background: $color__primary;
+                    transition: 0.3s ease;
+
+                    @media screen and (min-width: 400px) {
+                        display: block;
+                    }
+
+                    @include mobile-break {
+                        width: 55px;
+                    }
+                }
+            }
+
+            &:hover {
+                b {
+                    color: $color__primary;
+                }
+            }
+        }
+
+        &__content {
+            padding-bottom: 45px;
+            border-bottom: 1px solid $grey;
+
+            >*:first-child {
+                margin-top: 0;
+            }
+    
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}

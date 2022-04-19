@@ -1,0 +1,240 @@
+body {
+  font-family: $font__family--body;
+  font-weight: $font__weight--body;
+  font-size: $font__size--base;
+  color: $font__color--body;
+  line-height: $font__line-ht--base;
+}
+
+p.has-lead-font-size {
+  font-size: 16px;
+  font-family: $font__family--heading--alt;
+  font-weight: $font__weight--regular;
+  line-height: (26 / 16);
+  padding-left: 13px;
+  border-left: 1px solid $color__primary;
+
+  @include mobile-break {
+    font-size: 21px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $font__color--link;
+  transition: $transition;
+
+  &:focus, &:active, &:hover {
+    text-decoration: none;
+    color: $color__primary;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font__family--heading;
+  font-weight: $font__weight--heading;
+  color: $font__color--heading;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+
+  > sup, > sub {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: $font__family--heading--alt;
+    font-weight: $font__weight--heading--alt;
+    text-transform: none;
+    font-size: 16px;
+
+    &:before {
+      content: '';
+      position: relative;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      background-image: url( 'data:image/svg+xml;base64, #{$svg__heading}' );
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &.observing {
+    transform: translateX(-30px);
+  }
+
+  &.horizontal-sup {
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    @include mobile-break {
+      flex-wrap: nowrap;
+    }
+
+    > sub {
+      margin-bottom: 30px;
+      order: -1;
+
+      @include mobile-break {
+        flex-shrink: 0;
+        margin-right: $gutter;
+        align-self: flex-start;
+        margin-top: 6px;
+      }
+
+      @include screen--xxl {
+        margin-right: 80px;
+      }
+
+      @include screen--xxxxl {
+        margin-right: 125px;
+      }
+    }
+  }
+}
+
+@keyframes fader {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transition-delay: 0;
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes lastfade {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transition-delay: 0;
+    transform: translateX(0px);
+  }
+}
+  
+
+h1 {
+  position: relative;
+  font-size: 62px;
+  color: $white;
+  line-height: (1);
+  min-height: 1em;
+
+  @include screen--md {
+    font-size: 90px;
+    line-height: 0.9;
+  }
+
+  @include screen--xxl {
+    font-size: 165px;
+  }
+
+  @include screen--xxxl {
+    font-size: 195px;
+  }
+
+  > strong {
+    position: relative;
+    left: 0;
+    font-weight: $font__weight--heading;
+    opacity: 1;
+    
+    &:not(:first-of-type) {
+      position: absolute;
+      opacity: 0;
+      left: 0;
+    }
+    
+  }
+  
+  &.fader {
+    strong:first-of-type {
+      opacity: 0;
+      left: -30px;
+      transition: 0.5s;
+      transition-delay: 3s;
+    }
+    strong:nth-of-type(2) {
+      opacity: 0;
+      animation-name: fader;
+      animation-duration: 3s;
+      animation-delay: 3.5s;
+    }
+    strong:last-of-type() {
+      opacity: 0;
+      animation-duration: 0.5s;
+      animation-delay: 6.5s;
+      animation-name: lastfade;
+      animation-fill-mode: forwards;
+    }
+  }
+  
+  > sup {
+    font-family: $font__family--heading;
+    font-weight: $font__weight--heading;
+    font-size: 18px;
+    letter-spacing: tracking(100);
+    color: $white;
+    margin-bottom: 30px;
+
+    @include mobile-break {
+      font-size: 24px;
+    }
+  }
+}
+
+h2 {
+  font-size: 44px;
+  line-height: (40 / 44);
+
+  @include screen--md {
+    font-size: 60px;
+    line-height: (85 / 90);
+  }
+
+  @include screen--xxl {
+    font-size: 90px;
+  }
+
+  > sup {
+    margin-bottom: 45px;
+  }
+}
+
+h3 {
+  font-size: 26px;
+  line-height: (40 / 44);
+
+  @include screen--md {
+    font-size: 36px;
+    line-height: (85 / 90);
+  }
+
+  @include screen--xxl {
+    font-size: 48px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  line-height: (40 / 44);
+  margin-bottom: 0;
+  letter-spacing: tracking(100);
+
+  @include mobile-break {
+    font-size: 24px;
+    line-height: (85 / 90);
+  }
+}

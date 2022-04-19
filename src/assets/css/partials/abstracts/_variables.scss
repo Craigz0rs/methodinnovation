@@ -1,0 +1,274 @@
+$white: #ffffff;
+$black: #171717;
+$grey--xdark: #2F3438;
+$grey--dark: #969491;
+$grey: #D8D8D8;
+$grey--light: #F5F5F5;
+
+$color__primary: #00A9E0;
+$color__secondary: $black;
+
+$colors: ( "black": $black, "grey-xdark": $grey--xdark, "grey-dark": $grey--dark, "grey": $grey, "grey-light": $grey--light, "white": $white, "primary": $color__primary );
+
+$color__body-bg: $white;
+
+$font__color--body: $grey--xdark;
+$font__color--heading: $grey--xdark;
+$font__color--link: $font__color--body;
+
+$font__size--base: 18px;
+$font__line-ht--base: (30 / 18);
+$font__family--heading: 'komu-b', sans-serif;
+$font__family--heading--alt: 'mundial', sans-serif;
+$font__family--body: 'roboto', sans-serif;
+
+$font__weight--light: 300;
+$font__weight--book: 400;
+$font__weight--regular: 400;
+$font__weight--semibold: 600;
+$font__weight--bold: 700;
+$font__weight--heading: 400;
+$font__weight--heading--alt: 600;
+$font__weight--body: 300;
+
+$gutter: 30px;
+$gutter--sm: calc(0.5 * #{$gutter});
+$gutter--lg: 150px;
+$site__max-width: none;
+
+//header & nav
+$header-height: 120px;
+$header-height--desktop: $header-height;
+$header-bg: transparent;
+$header-bg--scrolled: $white;
+
+$nav__font: $font__family--heading;
+$nav__font--desktop: $font__family--body;
+$nav__font-size: 44px;
+$nav__font-size--desktop: 16px;
+$nav__font-color: $grey--xdark;
+$nav__font-color--desktop: $nav__font-color;
+$nav__font-weight: $font__weight--regular;
+$nav__font-weight--desktop: 400;
+
+$transition: 0.3s ease;
+
+$breakpoints: ( no: 0, xs: 480px, sm: 600px, md: 782px, lg: 960px, xl: 1080px, xxl: 1280px, xxxl: 1440px, xxxxl: 1600px );
+
+
+//old skeleton variables
+$primary: $color__primary;
+$secondary: $color__secondary;
+
+$body-color: $font__color--body;
+$body-bg: $color__body-bg;
+
+$font-path: '../fonts';
+$fa-font-path: $font-path;
+$font-family-heading: $font__family--heading;
+$font-weight-heading-regular: 800;
+$font-weight-heading-bold: 800;
+$font-family-body: $font__family--body;
+$font-weight-body-regular: $font__weight--body;
+
+$breakpoint: md;
+$breakpoint-desktop: xl;
+$breakpoint-nav: xl;
+
+$grid-breakpoints: $breakpoints;
+
+$grid-padding: $gutter;
+$grid-padding-lg: $gutter--lg;
+
+$num-columns: 12;
+
+$transition-fast: 275ms;
+$transition-medium: 400ms;
+$transition-slow: 650ms;
+
+$border-radius: 0;
+$border-radius-md: 0;
+$border-radius-sm: 0;
+
+// TypeKit ID: 
+
+$svg__team-bg: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310.58 866.68"><path d="m310.08 628.24-82.91-47.43c-10.17-6.36-16.94-10.16-16.94-32.17V367.26l99.85 57.09V160.54L38.44 4.45A32.06 32.06 0 0 0 22.8.5C5.55.5.5 12.27.5 29.49l.12 641.67c0 12 5.87 22 16.65 27.86 9.36 5.06 223.36 127.17 292.81 166.8Z" style="fill:none;stroke:#d4d4d4;stroke-miterlimit:10" data-name="Layer 2"/></svg>');
+$svg__logo: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363.74 350"><g style="isolation:isolate"><path d="M354.92 0a12.81 12.81 0 0 0-6.19 1.56L187.79 94.05a12.12 12.12 0 0 1-5.85 1.57h-.08a12.15 12.15 0 0 1-5.86-1.55L15 1.56A12.74 12.74 0 0 0 8.83 0C2 0 0 4.66 0 11.47L.05 265.4a12.12 12.12 0 0 0 6.59 11C11 278.79 128 345.57 131 347.27c2.6 1.48 5.64 2.73 6.91 2.73 4.59 0 7.13-2.87 7.13-7.46v-74.15a12.34 12.34 0 0 0-5.87-10.39L89.7 229.65c-4-2.52-6.7-4-6.7-12.73v-71.78l92.88 53.11a12.37 12.37 0 0 0 5.87 1.57h.08a12.41 12.41 0 0 0 5.88-1.57h.05l92.88-53.11v71.78c0 8.7-2.68 10.21-6.7 12.73L224.57 258a12.31 12.31 0 0 0-5.84 10.44v74.15c0 4.59 2.54 7.46 7.12 7.46 1.27 0 4.32-1.25 6.91-2.73 3-1.7 120-68.48 124.35-70.84a12.12 12.12 0 0 0 6.59-11V11.55c0-6.81-2-11.47-8.82-11.47" style="fill:#00a9e0;mix-blend-mode:multiply" data-name="Layer 2"/></g></svg>');
+$svg__quote: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 291.17 266.91"><path d="M56.68.5h62.22L77.75 141h39.15v125.41H.5V141Zm171.6 0h62.22L249.35 141h39.15v125.41H173.08V141Z" style="fill:none;stroke:#d8d8d8;stroke-miterlimit:10" data-name="Layer 2"/></svg>');
+$svg__cross--lg: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><style>.cls-1{fill:none;stroke:#969491;stroke-miterlimit:10}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Artwork"><path class="cls-1" d="M100 0v200M0 100h200"/></g></g></svg>');
+$svg__cross: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><defs><style>.cls-1{fill:none;stroke:#969491;stroke-miterlimit:10}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Artwork"><path class="cls-1" d="M37.5 0v75M0 37.5h75"/></g></g></svg>');
+$svg__arrow--down: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.63 12.71"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Artwork"><path class="cls-1" d="M11.28 6.54 5.82 12 .35 6.54M5.82 12V0"/></g></g></svg>');
+$svg__play: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 11"><path d="m8.79 6.31-6.88 4.06A.93.93 0 0 1 .5 9.56V1.43a.93.93 0 0 1 1.41-.8l6.88 4.06a1 1 0 0 1 0 1.62Z" style="fill:none;stroke:#fff;stroke-miterlimit:10" data-name="Layer 2"/></svg>');
+$svg__heading: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.74 13.74"><path style="fill:#00a9e0" d="M0 13.74V0h13.74L0 13.74z" data-name="Layer 2"/></svg>');
+$svg__button-arrow: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.85 10.85"><defs><style>.cls-1{fill:none;stroke:#00a9e0;stroke-miterlimit:10}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Artwork"><path class="cls-1" d="M1.25.5h9.1v9.1M10.35.5l-10 10"/></g></g></svg>');
+$svg__button-arrow-white: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.85 10.85"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Artwork"><path class="cls-1" d="M1.25.5h9.1v9.1M10.35.5l-10 10"/></g></g></svg>');
+$svg__arrow--down-blue: btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.81 10.71"><path d="M9.46 5.45 4.91 10 .35 5.45M4.91 10V0" style="fill:none;stroke:#00a9e0;stroke-miterlimit:10" data-name="Layer 2"/></svg>');
+
+//$svg: btoa( '<svg xmlns="http://www.w3.org/2000/svg" width="55.202" height="55.202" overflow="visible"><circle cx="27.601" cy="27.601" r="27.601" fill="#7b4e3c"/><path d="M36.964 25.957v6.126c0 .37-.284 1.282-1.282 1.282-.248 0-.607-.126-.801-.282l-3.408-2.726a9.72 9.72 0 00-6.051-2.122h-1.125a4.845 4.845 0 00-.177 1.282c0 1.165.391 2.241 1.048 3.104.633.83.006 2.026-1.038 2.026h-2.977c-.476 0-.93-.255-1.138-.683a10.157 10.157 0 01-1.024-4.446c0-.435.032-.863.087-1.282h-1.351a2.565 2.565 0 01-2.565-2.565v-3.847a2.565 2.565 0 012.565-2.565h7.694a9.722 9.722 0 006.051-2.122l3.408-2.726a1.28 1.28 0 01.801-.282c1.003 0 1.282.932 1.282 1.282v6.126a2.554 2.554 0 011.282 2.209 2.549 2.549 0 01-1.281 2.211zM34.4 18.08l-1.324 1.06a12.295 12.295 0 01-7.652 2.684v3.847c2.77 0 5.488.953 7.652 2.684l1.324 1.06V18.08z" fill="#fff"/></svg>' );
+// url( 'data:image/svg+xml;base64,$svg' );
+
+/**
+ * Formidable Forms
+ */
+//fonts
+$frm_font_1: $font-family-body;
+
+//css vars
+$frm_var_form-width: 100%;
+$frm_var_form-align: left;
+$frm_var_direction: ltr;
+$frm_var_fieldset: 0px;
+$frm_var_fieldset-color: $black;
+$frm_var_fieldset-padding: 0 0 15px 0;
+$frm_var_fieldset-bg-color: transparent;
+$frm_var_title-size: 40px;
+$frm_var_title-color: $body-color;
+$frm_var_title-margin-top: 10px;
+$frm_var_title-margin-bottom: 60px;
+$frm_var_form-desc-size: 16px;
+$frm_var_form-desc-color: $body-color;
+$frm_var_form-desc-margin-top: 10px;
+$frm_var_form-desc-margin-bottom: 25px;
+$frm_var_font: $frm_font_1;
+$frm_var_font-size: 24px;
+$frm_var_weight: $font__weight--heading;
+$frm_var_position: none;
+$frm_var_align: left;
+$frm_var_width: 150px;
+$frm_var_dz-border-color: $color__primary;
+$frm_var_required-color: $color__primary;
+$frm_var_required-weight: 300;
+$frm_var_label-padding: 0 0 3px 0;
+$frm_var_label-color: $body-color;
+$frm_var_label-font: $font__family--heading;
+$frm_var_label-weight: $font__weight--heading;
+$frm_var_description-font-size: 12px;
+$frm_var_description-color: $body-color;
+$frm_var_description-weight: normal;
+$frm_var_description-style: normal;
+$frm_var_description-align: left;
+$frm_var_description-margin: 0;
+$frm_var_field-font-size: 16px;
+$frm_var_field-height: 65px;
+$frm_var_line-height: 32px;
+$frm_var_field-width: 100%;
+$frm_var_auto-width: 100%;
+$frm_var_field-pad: 6px 10px;
+$frm_var_field-margin: 20px;
+$frm_var_field-weight: normal;
+$frm_var_text-color: $body-color;
+$frm_var_border-color: $grey;
+$frm_var_field-border-width: 1px;
+$frm_var_field-border-style: solid;
+$frm_var_bg-color: transparent;
+$frm_var_bg-color-active: transparent;
+$frm_var_border-color-active: $grey;
+$frm_var_text-color-error: $color__primary;
+$frm_var_bg-color-error: $white;
+$frm_var_border-color-error: $color__primary;
+$frm_var_border-width-error: 1px;
+$frm_var_border-style-error: solid;
+$frm_var_bg-color-disabled: $grey;
+$frm_var_border-color-disabled: $grey;
+$frm_var_text-color-disabled: $grey;
+$frm_var_radio-align: block;
+$frm_var_check-align: block;
+$frm_var_check-font-size: 18px;
+$frm_var_check-label-color: $body-color;
+$frm_var_check-weight: normal;
+$frm_var_section-font-size: 18px;
+$frm_var_section-color: $body-color;
+$frm_var_section-weight: bold;
+$frm_var_section-pad: 15px 0 3px 0;
+$frm_var_section-mar-top: 15px;
+$frm_var_section-mar-bottom: 30px;
+$frm_var_section-bg-color: transparent;
+$frm_var_section-border-color: $color__primary;
+$frm_var_section-border-width: 2px;
+$frm_var_section-border-style: solid;
+$frm_var_section-border-loc: -top;
+$frm_var_collapse-pos: after;
+$frm_var_submit-font-size: 15px;
+$frm_var_submit-width: auto;
+$frm_var_submit-height: auto;
+$frm_var_submit-bg-color: $color__primary;
+$frm_var_submit-border-color: $color__primary;
+$frm_var_submit-border-width: 1px;
+$frm_var_submit-text-color: $white;
+$frm_var_submit-weight: normal;
+$frm_var_submit-border-radius: $border-radius;
+$frm_var_submit-margin: 10px;
+$frm_var_submit-padding: 10px 20px;
+$frm_var_submit-shadow-color: transparent;
+$frm_var_submit-hover-bg-color: $color__primary;
+$frm_var_submit-hover-color: $white;
+$frm_var_submit-hover-border-color: $color__primary;
+$frm_var_submit-active-bg-color: $color__primary;
+$frm_var_submit-active-color: $white;
+$frm_var_submit-active-border-color: $color__primary;
+$frm_var_border-radius: $border-radius;
+$frm_var_error-bg: $color__primary;
+$frm_var_error-border: $color__primary;
+$frm_var_error-text: $white;
+$frm_var_error-font-size: 16px;
+$frm_var_success-bg-color: transparent;
+$frm_var_success-border-color: $grey;
+$frm_var_success-text-color: $white;
+$frm_var_success-font-size: 18px;
+$frm_var_progress-bg-color: $color__secondary;
+$frm_var_progress-active-color: $white;
+$frm_var_progress-active-bg-color: $color__primary;
+$frm_var_progress-color: $body-color;
+$frm_var_progress-border-color: $color__primary;
+$frm_var_progress-border-color-b: $color__primary;
+$frm_var_progress-border-size: 1px;
+$frm_var_progress-size: 30px;
+$frm_var_toggle-font-size: 15px;
+$frm_var_toggle-on-color: $color__primary;
+$frm_var_toggle-off-color: $grey;
+$frm_var_slider-font-size: 24px;
+$frm_var_slider-color: $white;
+$frm_var_slider-bar-color: $color__primary;
+$frm_var_date-head-bg-color: $color__primary;
+$frm_var_date-head-color: $white;
+$frm_var_date-band-color: $color__secondary;
+$frm_var_box-shadow: none;
+$frm_var_image-size: 150px;
+
+/**
+ * WooCommerce
+ */
+$woocommerce:   	$color__primary;
+$green:         	$grey;
+$red:               $color__primary;
+$orange:        	$grey;
+$blue:          	$color__primary;
+
+$primary:           $color__primary;                                  // Primary color for buttons (alt)
+$primarytext:       $white;    // Text on primary color bg
+
+$secondary:         $grey;    // Secondary buttons
+$secondarytext:     $white;   // Text on secondary color bg
+
+$highlight:         $color__primary;                // Prices, In stock labels, sales flash
+$highlightext:      $white;  // Text on highlight color bg
+
+$contentbg:         $body-bg;                                     // Content BG - Tabs (active state)
+$subtext:           $grey;                                  // small, breadcrumbs etc
+
+// export vars as CSS vars
+:root {
+  --woocommerce: $woocommerce;
+  --wc-green: $green;
+  --wc-red: $red;
+  --wc-orange: $orange;
+  --wc-blue: $blue;
+  --wc-primary: $primary;
+  --wc-primary-text: $primarytext;
+  --wc-secondary: $secondary;
+  --wc-secondary-text: $secondarytext;
+  --wc-highlight: $highlight;
+  --wc-highligh-text: $highlightext;
+  --wc-content-bg: $contentbg;
+  --wc-subtext: $subtext;
+}
